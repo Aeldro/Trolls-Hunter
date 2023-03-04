@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f3f3f;
+    color: white;
+    user-select: none;
+}
+
+h1 {
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+#startButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 42px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    box-shadow: #ffffff 0px 3px 0px;
+}
+
+#startButton:hover {
+    cursor: pointer;
+}
+
+#startButton:active {
+    box-shadow: none;
+    transform: translate(0px, 2px);
+    box-shadow: #ffffff 0px 1px 0px;
+}
+
+#infoSpace {
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    width: 800px;
+    font-size: 32px;
+    padding: 10px;
+    /* margin-bottom: 20px; */
+    /* border: 1px solid black; */
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+#canvas {
+    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+    cursor: crosshair;
+    width: 800px;
+    height: 600px;
+}
+
+#gameOverScreen {
+    background-color: black;
+    width: 800px;
+    height: 600px;
+    line-height: 600px;
+    font-size: 135px;
+    text-align: center;
+    opacity: 50%;
+}
+
+.troll {
+    height: auto;
+    animation: trollAnimation 5s ease-in-out forwards;
+    --scaler: 1;
+    width: var(--width);
+    position: absolute;
+}
+
+.troll:hover {
+    --scaler: 1.1;
+}
+
+.troll:active {
+    --scaler: 0.9;
+}
+
+@keyframes trollAnimation {
+    from {
+        transform: translate(var(--x), var(--y)) scale(var(--scaler));
+    } to {
+        transform: translate(var(--newX), var(--newY)) scale(var(--scaler));
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#droits {
+    margin-top: 5px;
+}
