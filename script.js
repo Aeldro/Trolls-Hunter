@@ -51,10 +51,12 @@ function runningGame() {
     if (isGameRunning) {
         isGameRunning = false;
         startButton.innerHTML = "Jouer";
+        startButton.href = ""
         init();
     } else {
         isGameRunning = true;
         startButton.innerHTML = "Quitter";
+        startButton.href = "#infoSpace"
         spawnTroll();
     }
 
@@ -73,11 +75,11 @@ function spawnTroll() {
             generatedTroll.style.setProperty('--width', trollWidth + "px");
 
             // Défini l'emplacement de la cible
-            let x = Math.random() * 800;
-            let y = Math.random() * 600;
-            if (x > 800 - trollWidth) {x = x - (trollWidth / 2);}
+            let x = Math.random() * canvas.offsetWidth;
+            let y = Math.random() * canvas.offsetHeight;
+            if (x > canvas.offsetWidth - trollWidth) {x = x - (trollWidth / 2);}
             if (x < 0 + trollWidth) {x = x + (trollWidth / 2);}
-            if (y > 600 - trollWidth) {y = y - (trollWidth / 2);}
+            if (y > canvas.offsetHeight - trollWidth) {y = y - (trollWidth / 2);}
             if (y < 0 + trollWidth) {y = y + (trollWidth / 2);}
             x = x - (trollWidth / 2)
             y = y - (trollWidth / 2)
@@ -88,11 +90,11 @@ function spawnTroll() {
             canvas.appendChild(generatedTroll);
 
             // Animation de la cible
-            let newX = Math.random() * 800;
-            let newY = Math.random() * 600;
-            if (newX > 800 - trollWidth) {newX = newX - (trollWidth / 2);}
+            let newX = Math.random() * canvas.offsetWidth;
+            let newY = Math.random() * canvas.offsetHeight;
+            if (newX > canvas.offsetWidth - trollWidth) {newX = newX - (trollWidth / 2);}
             if (newX < 0 + trollWidth) {newX = newX + (trollWidth / 2);}
-            if (newY > 600 - trollWidth) {newY = newY - (trollWidth / 2);}
+            if (newY > canvas.offsetHeight - trollWidth) {newY = newY - (trollWidth / 2);}
             if (newY < 0 + trollWidth) {newY = newY + (trollWidth / 2);}
             newX = newX - (trollWidth / 2)
             newY = newY - (trollWidth / 2)

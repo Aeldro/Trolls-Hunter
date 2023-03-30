@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,25 @@
     <title>Trolls Hunter</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Trolls Hunter</h1>
-    <h3>Bienvenue sur <i>Trolls Hunter</i>. Cliquez sur <i>Jouer</i> pour commencer...</h3>
-    <div id="startButton">Jouer</div>
-    <h4>Dix trolls en simultané et c'est le <i>Game Over</i> !</h4>
-    <div id="infoSpace"><span id="bestScore">Meilleur score : 0</span><span id="score">Score : 0</span></div>
-    <div id="canvas"></div>
-    <div id="gameOverScreen" class="hidden"><p>Game Over</p></div>
-    <p id="droits">@ 2022 Aeldro</p>
+    <main>
+        <h1>Trolls Hunter</h1>
+        <hr>
+        <h3>Bienvenue sur <i>Trolls Hunter</i>. Cliquez sur <i>Jouer</i> pour commencer...</h3>
+        <a id="startButton">Jouer</a>
+        <h3>Dix trolls en simultané et c'est le <i>Game Over</i> !</h3>
+        <div id="infoSpace"><span id="bestScore">Meilleur score : 0</span><span id="score">Score : 0</span></div>
+        <div id="canvas"></div>
+        <div id="gameOverScreen" class=" gameOverScreen hidden">
+            <p>Game Over</p>
+        </div>
+    </main>
+    <footer>
+        <p id="droits">@ 2022 Aeldro</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
