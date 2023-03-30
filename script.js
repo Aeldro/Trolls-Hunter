@@ -64,7 +64,7 @@ function runningGame() {
 
 function spawnTroll() {
     if (isGameRunning) {
-        if (canvas.childElementCount <= 10) {
+        if (canvas.childElementCount < 10) {
             // Défini l'image de la cible
             let generatedTroll = new Image();
             generatedTroll.classList.add('troll');
